@@ -1,0 +1,36 @@
+
+.modal-component{
+  @apply flex flex-col bg-white absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] min-w-[400px] w-fit border border-gray-300 shadow-none p-0;
+}
+
+.modal-header{
+  @apply px-3 py-2 flex justify-between items-center border-b border-b-gray-200;
+
+  .modal-title{
+    @apply text-lg font-bold;
+  }
+}
+
+.modal-body{
+  @apply px-3 py-4;
+}
+
+.modal-footer{
+  @apply px-3 py-2 border-t border-t-gray-200 flex justify-between;
+
+  &.action-modal{
+    @apply justify-end;
+  }
+}
+
+.transparent-btn{
+  @apply p-2 bg-transparent;
+}
+
+.btn-row{
+  @apply w-full flex flex-col lg:flex-row gap-3 justify-between items-center;
+
+  &.end{
+    @apply justify-end;
+  }
+}

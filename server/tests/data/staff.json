@@ -1,0 +1,37 @@
+[
+  {
+    "staff": {
+      "firstName": "Jaimin",
+      "lastName": "MosLake"
+    },
+    "positionId": 1
+  },
+  {
+    "staff": {
+      "firstName": "Apoorva",
+      "lastName": "Sharma"
+    },
+    "positionId": 2
+  },
+  {
+    "staff": {
+      "firstName": "Alka",
+      "lastName": "Pandya"
+    },
+    "positionId": 3
+  },
+  {
+    "staff": {
+      "firstName": "Sagar",
+      "lastName": "Shukla"
+    },
+    "positionId": 4
+  },
+  {
+    "staff": {
+      "firstName": "Sunny",
+      "lastName": "Savaliya"
+    },
+    "positionId": 5
+  }
+]

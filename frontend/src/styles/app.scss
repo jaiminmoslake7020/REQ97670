@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "grid";
+@import "modal";
+
+.spinning{
+  @apply animate-spin;
+}
