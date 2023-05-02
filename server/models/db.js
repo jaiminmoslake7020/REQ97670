@@ -20,6 +20,7 @@ const sequelize = new Sequelize('defaultdb', 'doadmin', 'AVNS_vdeIVgKctjbWVhkGha
   }
 });
 
+
 module.exports = {
   sequelize
 }
