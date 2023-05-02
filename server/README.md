@@ -1,4 +1,4 @@
-# Getting Started with App
+_# Getting Started with App
 
 This project is built using NodeJs/Express, and it works with sqlite3 and postgresql. Best with sqlite3 memory. 
 
@@ -17,3 +17,8 @@ You will also see any lint errors in the console.
 ### `npm test`
 
 It will remove all data and seed data again, test all user stories asked.
+
+
+### CI/CD
+
+This app is deployed at DigitalOcean and DigitalOcean picks up the commit and builds a new build and deploys it._
