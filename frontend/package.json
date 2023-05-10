@@ -27,11 +27,12 @@
   },
   "scripts": {
     "start": "DISABLE_ESLINT_PLUGIN=true PORT=3001 craco start",
-    "build": "craco build",
+    "build": "DISABLE_ESLINT_PLUGIN=true craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.ts{,x}",
-    "lint": "tsc --noEmit && eslint src/**/*.ts{,x}"
+    "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
+    "upload": "sh ./upload.sh"
   },
   "browserslist": {
     "production": [

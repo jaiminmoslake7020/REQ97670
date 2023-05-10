@@ -1,0 +1,185 @@
+openapi: 3.0.0
+info:
+  title: Req API
+  version: 1.0.0
+servers:
+  - url: https://monkfish-app-9ajr4.ondigitalocean.app/
+paths:
+  /position:
+    post:
+      summary: Create a new position
+      operationId: createPosition
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: number
+                title:
+                  type: string
+                staff:
+                  anyOf:
+                    - type: null
+                    - $ref: '#/components/schemas/StaffType'
+                positionType:
+                  $ref: '#/components/schemas/PositionTypeType'
+                reportingPositionId:
+                  anyOf:
+                    - type: null
+                    - type: number
+                    - type: undefined
+                createdAt:
+                  type: string
+                  format: date-time
+                updatedAt:
+                  type: string
+                  format: date-time
+      responses:
+        '201':
+          description: Created
+    get:
+      summary: Get all positions
+      operationId: getPositions
+      responses:
+        '200':
+          description: OK
+  /position/{id}:
+    get:
+      summary: Get a position by ID
+      operationId: getPositionById
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: ID of the position to get
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not found
+    post:
+      summary: Fill a position with an employee
+      operationId: fillPosition
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: ID of the position to fill
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: number
+                title:
+                  type: string
+                staff:
+                  anyOf:
+                    - type: null
+                    - $ref: '#/components/schemas/StaffType'
+                positionType:
+                  $ref: '#/components/schemas/PositionTypeType'
+                reportingPositionId:
+                  anyOf:
+                    - type: null
+                    - type: number
+                    - type: undefined
+                createdAt:
+                  type: string
+                  format: date-time
+                updatedAt:
+                  type: string
+                  format: date-time
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Remove an employee from a position
+      operationId: removeEmployeeFromPosition
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: ID of the position to remove the employee from
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: number
+                title:
+                  type: string
+                staff:
+                  anyOf:
+                    - type: null
+                    - $ref: '#/components/schemas/StaffType'
+                positionType:
+                  $ref: '#/components/schemas/PositionTypeType'
+                reportingPositionId:
+                  anyOf:
+                    - type: null
+                    - type: number
+                    - type: undefined
+                createdAt:
+                  type: string
+                  format: date-time
+                updatedAt:
+                  type: string
+                  format: date-time
+      responses:
+        '200':
+          description: OK
+  /position/add-descendant/{id}:
+    post:
+      summary: Add a descendant position to a position
+      operationId: addDescendantPosition
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: ID of the position to add a descendant to
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                // define the properties of the descendant position
+              required:
+                // define the required properties of the descendant position
+      responses:
+        '200':
+          description: OK
+  /position-type:
+    post:
+      summary: Create a new position type
+      operationId: createPositionType
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                // define the properties of the new position type
+              required:
+                // define the required properties of the new position type
+      responses

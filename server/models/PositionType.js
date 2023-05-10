@@ -15,7 +15,7 @@ PositionType.init({
     allowNull: false
   },
   level: {
-    type: DataTypes.NUMBER,
+    type: DataTypes.INTEGER,
     allowNull: false,
     unique: true
   },

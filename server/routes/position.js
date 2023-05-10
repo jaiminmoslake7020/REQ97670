@@ -6,7 +6,6 @@ const { addPosition,
 } = require('../services/Position')
 var router = express.Router();
 
-{/* User Story 1 */}
 router.post('/', function(req, res, next) {
   if (req.body && req.body.title) {
     addPosition(req.body).then((d) => {
@@ -64,6 +63,7 @@ router.post('/remove-employee/:id', function(req, res, next) {
   }
 });
 
+{/* User Story 1 */}
 router.get('/', function(req, res, next) {
   getAllPositions().then((d) => {
     if (d.error) {

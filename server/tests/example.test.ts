@@ -1,9 +1,9 @@
 const request = require("supertest");
 const app = require("../app");
+// @ts-ignore
 const { expect, beforeAll } = require('@jest/globals');
 const { setupTables } = require("../db/db");
 const positionTypes = require("./data/position-types.json");
-const positions = require("./data/positions.json");
 const staff = require("./data/staff.json");
 
 describe("All Tests", () => {
@@ -277,7 +277,7 @@ describe("All Tests", () => {
                     lastName: 'Sikre'
                 },
                 position: {
-                    "title": "Goa CM",
+                    "title": "Senior Developer ||",
                 }
             }).expect(200);
         expect(res.body).toBeTruthy();
